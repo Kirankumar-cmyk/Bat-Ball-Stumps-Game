@@ -1,0 +1,46 @@
+body {
+            text-align: center;
+            background-image: url(/3468697.jpg);
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .Bat{
+            padding: 80px;
+            margin-right: 20px;
+            border: none;
+
+            background: url(/cricket-bat-cartoon-style-vector.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            mix-blend-mode: multiply;
+        }
+
+        .Ball{
+            padding: 80px;
+            margin-right: 20px;
+            border: none;
+
+            background: url(/ball.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            mix-blend-mode: multiply;
+            
+        }
+
+        .Stumps{
+            padding: 80px;
+            margin-right: 20px;
+            border: none;
+
+            background-image: url(/stumps.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            mix-blend-mode: multiply;
+            
+            
+        }
