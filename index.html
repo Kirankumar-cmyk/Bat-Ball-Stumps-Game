@@ -11,41 +11,24 @@
     <button class="Bat" onclick="
     computerChoice= generateRandomOpt();
     let result;
+    result=generateResult('Bat',computerChoice);
+    displayResult(result);
     
-    if(computerChoice=='Ball'){
-        result='User chosen Bat <br>,'+ `Computer  chosen ${computerChoice}<br>`+' User has won 😊';
-    }else if(computerChoice=='Stump'){
-        result='User chosen Bat,<br> '+ `Computer  chosen ${computerChoice},<br>`+' Computer  has won 🖥️';
-    }else{
-        result='User chosen Bat,<br> '+ `Computer  chosen ${computerChoice},<br>`+` I'ts tie 🤝` ;
-    }
-    document.querySelector('.id').innerHTML=result;
+    
     
     "></button>
     <button class="Ball" onclick="
      computerChoice=generateRandomOpt();
+    result=generateResult('Ball',computerChoice);
+    displayResult(result);
     
-    if(computerChoice=='Stump'){
-        result='User chosen Ball <br>,'+ `Computer chosen ${computerChoice}<br>`+' User has won 😊';
-    }else if(computerChoice=='Bat'){
-        result='User chosen Ball,<br> '+ `Computer  chosen ${computerChoice},<br>`+' Computer  has won 🖥️';
-    }else{
-        result='User chosen Ball,<br> '+ `Computer chosen ${computerChoice},<br>`+` I'ts tie 🤝` ;
-    }
-    document.querySelector('.id').innerHTML=result;
     
     "></button>
     <button class="Stumps" onclick="
     
     computerChoice=generateRandomOpt();
-    if(computerChoice=='Bat'){
-        result='User chosen Stumps <br>,'+ `Computer chosen ${computerChoice}<br>`+' User has won 😊';
-    }else if(computerChoice=='Ball'){
-        result='User chosen Stumps,<br> '+ `Computer chosen ${computerChoice},<br>`+' Computer  has won 🖥️';
-    }else{
-        result='User chosen Stumps,<br> '+ `Computer chosen ${computerChoice},<br>`+` I'ts tie 🤝` ;
-    }
-    document.querySelector('.id').innerHTML=result;
+     result=generateResult('Stumps',computerChoice);
+    displayResult(result);
     
     "></button>
      <p class="id"></p>
