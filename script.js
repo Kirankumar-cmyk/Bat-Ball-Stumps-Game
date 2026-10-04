@@ -17,6 +17,18 @@ let score={
     Win:0,
     Loss:0,
     Tie:0,
+    winScoredisplay: function(){
+         document.querySelector('.win-dsp').
+         innerHTML=score.Win;
+    },
+    LossScoredisplay: function(){
+         document.querySelector('.Loss-dsp').innerHTML=score.Loss;
+    },
+    TieScoredisplay: function(){
+         document.querySelector('.Tie-dsp').innerHTML=score.Tie;
+    },
+   
+    
 };
 
 function generateResult(userChoice,computerChoice){
@@ -73,8 +85,8 @@ function generateResult(userChoice,computerChoice){
 
 function displayResult(result){
     document.querySelector('.id').innerHTML=result;
-    document.querySelector('.win-dsp').innerHTML=score.Win;
-    document.querySelector('.Loss-dsp').innerHTML=score.Loss;
-    document.querySelector('.Tie-dsp').innerHTML=score.Tie;
+   score.winScoredisplay();
+    score.LossScoredisplay();
+    score.TieScoredisplay();
 
 }
