@@ -1,39 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bat Ball Stump game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <h1>Bat Ball Stump game</h1>
     <button class="Bat" onclick="
-    computerChoice= generateRandomOpt();
-    let result;
-    result=generateResult('Bat',computerChoice);
-    displayResult(result);
-    
-    
-    
-    "></button>
+        computerChoice = generateRandomOpt();
+        let result;
+        result = generateResult('Bat', computerChoice);
+        displayResult(result);
+      "></button>
     <button class="Ball" onclick="
-     computerChoice=generateRandomOpt();
-    result=generateResult('Ball',computerChoice);
-    displayResult(result);
-    
-    
-    "></button>
+        computerChoice = generateRandomOpt();
+        result = generateResult('Ball', computerChoice);
+        displayResult(result);
+      "></button>
     <button class="Stumps" onclick="
-    
-    computerChoice=generateRandomOpt();
-     result=generateResult('Stumps',computerChoice);
-    displayResult(result);
-    
-    "></button>
-    
+        computerChoice = generateRandomOpt();
+        result = generateResult('Stumps', computerChoice);
+        displayResult(result);
+      "></button>
+
+    <button class="reset" onclick="
+        localStorage.clear();
+        score = {
+          Win: 0,
+          Loss: 0,
+          Tie: 0,
+        }
+       displayResult('');
+      ">
+        Reset
+    </button>
+
     <div class="score-board">
-       <h1>Score board</h1>
+        <h1>Score board</h1>
         <div class="win score">
             <h4>Win</h4>
             <p class="win-dsp"></p>
@@ -49,10 +56,9 @@
 
         <div class="result-msg">
             <p class="id"></p>
-            
         </div>
     </div>
-
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

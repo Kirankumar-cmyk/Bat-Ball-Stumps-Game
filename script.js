@@ -13,23 +13,15 @@ function generateRandomOpt(){
     }
     return computerChoice;
 }
-let score={
+
+let scoreStr=localStorage.getItem('Score');
+let score=JSON.parse(scoreStr)||{
+
     Win:0,
-    Loss:0,
-    Tie:0,
-    winScoredisplay: function(){
-         document.querySelector('.win-dsp').
-         innerHTML=score.Win;
-    },
-    LossScoredisplay: function(){
-         document.querySelector('.Loss-dsp').innerHTML=score.Loss;
-    },
-    TieScoredisplay: function(){
-         document.querySelector('.Tie-dsp').innerHTML=score.Tie;
-    },
-   
-    
-};
+     Loss:0,
+     Tie:0, 
+   }
+
 
 function generateResult(userChoice,computerChoice){
     if(userChoice=='Bat'){
@@ -85,8 +77,14 @@ function generateResult(userChoice,computerChoice){
 
 function displayResult(result){
     document.querySelector('.id').innerHTML=result;
-   score.winScoredisplay();
-    score.LossScoredisplay();
-    score.TieScoredisplay();
 
+       localStorage.setItem('Score',JSON.stringify(score));
+         document.querySelector('.win-dsp').innerHTML=score.Win;
+  
+         document.querySelector('.Loss-dsp').innerHTML=score.Loss;
+         document.querySelector('.Tie-dsp').innerHTML=score.Tie;
+  
+   
 }
+
+
